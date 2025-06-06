@@ -1,1 +1,14 @@
+GET /classes/ (List all upcoming classes)
 
+curl -X GET http://localhost:8000/classes/ \
+-H "Content-Type: application/json"
+POST /book/ (Create a booking)
+
+curl -X POST http://localhost:8000/book/ \
+-H "Content-Type: application/json" \
+-d '{"fitness_class": 1, "client_name": "John", "client_email": "john@example.com"}'
+
+GET /bookings/ (List bookings by email)
+
+curl -X GET "http://localhost:8000/bookings/?email=john@example.com" \
+-H "Content-Type: application/json"
